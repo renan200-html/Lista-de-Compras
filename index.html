@@ -1,0 +1,62 @@
+# Lista-de-Compras
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Compras</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>🛒 Lista de Compras</h1>
+
+        <div class="input-area">
+            <input type="text" id="itemInput" placeholder="Digite um item...">
+            <button onclick="adicionarItem()">Adicionar</button>
+        </div>
+
+        <ul id="lista"></ul>
+    </div>
+
+    <script>
+        function adicionarItem() {
+            const input = document.getElementById("itemInput");
+            const texto = input.value;
+
+            if (texto === "") return;
+
+            const li = document.createElement("li");
+
+            const span = document.createElement("span");
+            span.textContent = texto;
+
+            // botão de riscar
+            const btnCheck = document.createElement("button");
+            btnCheck.textContent = "✔";
+            btnCheck.onclick = function () {
+                span.classList.toggle("riscado");
+            };
+
+            // botão de excluir
+            const btnDelete = document.createElement("button");
+            btnDelete.textContent = "❌";
+            btnDelete.onclick = function () {
+                li.remove();
+            };
+
+            li.appendChild(span);
+            li.appendChild(btnCheck);
+            li.appendChild(btnDelete);
+
+            document.getElementById("lista").appendChild(li);
+
+            input.value = "";
+        }
+    </script>
+
+</body>
+
+</html>
