@@ -1,18 +1,16 @@
-# Lista-de-Compras
 <!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
-    <title>Lista de Compras</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Compras - Alimentos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
     <div class="container">
-        <h1>🛒 Lista de Compras</h1>
+        <h1>🍽️ Lista de Compras</h1>
 
         <div class="input-area">
             <input type="text" id="itemInput" placeholder="Digite um item...">
@@ -34,6 +32,11 @@
             const span = document.createElement("span");
             span.textContent = texto;
 
+            // Adicionando ícones de comida dependendo do item
+            const icon = document.createElement("img");
+            icon.classList.add("food-icon");
+            icon.src = "https://via.placeholder.com/30"; // Aqui você pode colocar um ícone específico relacionado ao alimento (por ex, frutas, legumes, etc.)
+
             // botão de riscar
             const btnCheck = document.createElement("button");
             btnCheck.textContent = "✔";
@@ -48,6 +51,7 @@
                 li.remove();
             };
 
+            li.appendChild(icon);
             li.appendChild(span);
             li.appendChild(btnCheck);
             li.appendChild(btnDelete);
@@ -57,7 +61,6 @@
             input.value = "";
         }
     </script>
-
 </body>
 
 </html>
