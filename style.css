@@ -1,7 +1,7 @@
-/* Fundo da página */
+/* Fundo da página (claro e suave) */
 body {
-  font-family: 'Arial', sans-serif;
-  background: linear-gradient(135deg, #FFFBF2, #FFEBB3); /* Tons mais claros e quentes */
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #fff8e1, #ffe0b2);
   margin: 0;
   padding: 0;
   color: #333;
@@ -11,104 +11,67 @@ body {
 .container {
   width: 350px;
   margin: 60px auto;
-  background: #fff;
+  background: #ffffff;
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  background: #f9f9f9;
 }
 
 /* Título */
 h1 {
   text-align: center;
   margin-bottom: 20px;
-  color: #FF7043; /* Cor laranja, lembrando alimentos como laranja ou abóbora */
+  color: #ff9800;
 }
 
-/* Área de input + botão */
-.input-area {
-  display: flex;
-  gap: 10px;
-  justify-content: space-between;
-}
-
-/* Campo de texto */
+/* Input */
 input {
   flex: 1;
   padding: 10px;
-  border: 2px solid #ccc;
+  border: 2px solid #ddd;
   border-radius: 8px;
-  outline: none;
   background: #fff;
   color: #333;
-  font-size: 14px;
 }
 
-/* Quando clica no input */
 input:focus {
-  border-color: #FF7043;
+  border-color: #ff9800;
 }
 
-/* Botões */
+/* Botão */
 button {
   padding: 10px 15px;
   border: none;
-  background: #FF7043;
+  background: #ff9800;
   color: white;
   border-radius: 8px;
   cursor: pointer;
-  transition: 0.3s;
-  font-size: 14px;
 }
 
-/* Hover botão */
 button:hover {
-  background: #FF5722;
+  background: #fb8c00;
 }
 
 /* Lista */
 ul {
   margin-top: 20px;
   padding-left: 0;
-  list-style-type: none;
+  list-style: none;
 }
 
 /* Itens */
 li {
-  margin: 12px 0;
-  font-size: 16px;
+  margin: 10px 0;
+  padding: 10px;
+  background: #fff3e0;
+  border-radius: 8px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
-  background-color: #FFEBB3; /* Fundo leve como se fosse uma embalagem de comida */
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Ícones de comida */
-.food-icon {
-  width: 30px;
-  height: 30px;
-  margin-right: 10px;
-}
-
-/* Texto riscado */
+/* Riscado */
 .riscado {
   text-decoration: line-through;
-  color: #AAA;
-}
-
-/* Hover no item */
-li:hover {
-  background-color: #FFE0B2;
-  transform: scale(1.05);
-  transition: 0.3s;
-}
-
-/* Botões dentro do item */
-li button {
-  margin-left: 5px;
-  padding: 5px 8px;
-  font-size: 14px;
+  color: #aaa;
 }
