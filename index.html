@@ -20,49 +20,47 @@
         <ul id="lista"></ul>
     </div>
 
-    <script>
-        function adicionarItem() {
-            const input = document.getElementById("itemInput");
-            const texto = input.value;
+   <script>
+function adicionarItem() {
+    const input = document.getElementById("itemInput");
+    const texto = input.value;
 
-            if (texto === "") return;
+    if (texto === "") return;
 
-            const li = document.createElement("li");
+    const li = document.createElement("li");
 
-            const span = document.createElement("span");
-            span.textContent = texto;
+    const span = document.createElement("span");
+    span.textContent = texto;
 
-            // Ícone de comida
-            const icon = document.createElement("img");
-            icon.classList.add("food-icon");
-            
-            // Você pode substituir essa URL com o link direto do ícone de comida desejado
-            icon.src = "https://image.flaticon.com/icons/png/512/1946/1946429.png";  // Exemplo de ícone de maçã (substitua com o ícone que você quiser)
+    // 🍎 ÍCONE (agora funcionando)
+    const icon = document.createElement("span");
+    icon.textContent = "🍽️";
+    icon.style.marginRight = "10px";
 
-            // botão de riscar
-            const btnCheck = document.createElement("button");
-            btnCheck.textContent = "✔";
-            btnCheck.onclick = function () {
-                span.classList.toggle("riscado");
-            };
+    // botão de riscar
+    const btnCheck = document.createElement("button");
+    btnCheck.textContent = "✔";
+    btnCheck.onclick = function () {
+        span.classList.toggle("riscado");
+    };
 
-            // botão de excluir
-            const btnDelete = document.createElement("button");
-            btnDelete.textContent = "❌";
-            btnDelete.onclick = function () {
-                li.remove();
-            };
+    // botão de excluir
+    const btnDelete = document.createElement("button");
+    btnDelete.textContent = "❌";
+    btnDelete.onclick = function () {
+        li.remove();
+    };
 
-            li.appendChild(icon);
-            li.appendChild(span);
-            li.appendChild(btnCheck);
-            li.appendChild(btnDelete);
+    li.appendChild(icon);
+    li.appendChild(span);
+    li.appendChild(btnCheck);
+    li.appendChild(btnDelete);
 
-            document.getElementById("lista").appendChild(li);
+    document.getElementById("lista").appendChild(li);
 
-            input.value = "";
-        }
-    </script>
+    input.value = "";
+}
+</script>
 </body>
 
 </html>
