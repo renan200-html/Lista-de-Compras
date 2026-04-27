@@ -1,92 +1,109 @@
-/* Fundo da página (mais claro) */
+/* Fundo da página */
 body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #2b0000, #3a0d0d);
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #FFFBF2, #FFEBB3); /* Tons mais claros e quentes */
   margin: 0;
   padding: 0;
-  color: white;
+  color: #333;
 }
 
 /* Caixa principal */
 .container {
   width: 350px;
   margin: 60px auto;
-  background: #1e1e1e;
+  background: #fff;
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(255, 0, 0, 0.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  background: #f9f9f9;
 }
 
 /* Título */
 h1 {
   text-align: center;
   margin-bottom: 20px;
-  color: #ff6666;
+  color: #FF7043; /* Cor laranja, lembrando alimentos como laranja ou abóbora */
 }
 
 /* Área de input + botão */
 .input-area {
   display: flex;
   gap: 10px;
+  justify-content: space-between;
 }
 
 /* Campo de texto */
 input {
   flex: 1;
   padding: 10px;
-  border: 2px solid #444;
+  border: 2px solid #ccc;
   border-radius: 8px;
   outline: none;
-  background: #2a2a2a;
-  color: white;
+  background: #fff;
+  color: #333;
+  font-size: 14px;
 }
 
 /* Quando clica no input */
 input:focus {
-  border-color: #ff6666;
+  border-color: #FF7043;
 }
 
 /* Botões */
 button {
   padding: 10px 15px;
   border: none;
-  background: #ff4d4d;
+  background: #FF7043;
   color: white;
   border-radius: 8px;
   cursor: pointer;
   transition: 0.3s;
+  font-size: 14px;
 }
 
 /* Hover botão */
 button:hover {
-  background: #ff1a1a;
+  background: #FF5722;
 }
 
 /* Lista */
 ul {
   margin-top: 20px;
-  padding-left: 20px;
+  padding-left: 0;
+  list-style-type: none;
 }
 
 /* Itens */
 li {
-  margin: 8px 0;
+  margin: 12px 0;
   font-size: 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px;
+  background-color: #FFEBB3; /* Fundo leve como se fosse uma embalagem de comida */
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Ícones de comida */
+.food-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
 }
 
 /* Texto riscado */
 .riscado {
   text-decoration: line-through;
-  color: #aaa;
-  opacity: 0.7;
+  color: #AAA;
 }
 
 /* Hover no item */
 li:hover {
-  color: #ff6666;
+  background-color: #FFE0B2;
+  transform: scale(1.05);
+  transition: 0.3s;
 }
 
 /* Botões dentro do item */
